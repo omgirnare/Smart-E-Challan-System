@@ -1,0 +1,21 @@
+{
+  "source": "images_001007.jpg",
+  "frames": 1,
+  "resolution": "387x516",
+  "video_fps": null,
+  "avg_detect_track_ms": 1082.4,
+  "processing_fps": 0.9,
+  "detections_per_class": {
+    "helmet": 0,
+    "no_helmet": 2,
+    "number_plate": 1,
+    "rider": 1
+  },
+  "candidate_tracks": 0,
+  "confirmed_violations": 0,
+  "challans_issued": 0,
+  "manual_review": 0,
+  "skipped_riders": {
+    "rider cut at image border (head may be outside frame)": 1
+  }
+}

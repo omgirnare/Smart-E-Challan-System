@@ -1,0 +1,20 @@
+{
+  "source": "stock-photo--photo-of-a-motorcycle-rider_012620.jpg",
+  "frames": 1,
+  "resolution": "1001x1600",
+  "video_fps": null,
+  "avg_detect_track_ms": 689.0,
+  "processing_fps": 1.5,
+  "detections_per_class": {
+    "helmet": 0,
+    "no_helmet": 1,
+    "number_plate": 1,
+    "rider": 1
+  },
+  "candidate_tracks": 1,
+  "confirmed_violations": 1,
+  "challans_issued": 1,
+  "manual_review": 0,
+  "skipped_riders": {},
+  "rejected": 0
+}

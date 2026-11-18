@@ -1,0 +1,91 @@
+[
+  {
+    "track_id": "1",
+    "hits": 234,
+    "first_frame": 3,
+    "plate_img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test4\\plates\\plate_1_f98.png",
+    "rider_img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test4\\riders\\rider_1_f5.png",
+    "frame_time_ms": 80.0,
+    "last_frame": 241,
+    "challan_id": "PTP-20261118-0001",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-18T23:25:14",
+    "raw_ocr": "@O4DL219",
+    "ocr_conf": 0.001,
+    "engine": "easyocr+rules+mistral",
+    "ocr_readings": [
+      {
+        "raw_ocr": "@O4DL219",
+        "plate": "O4DL219",
+        "valid": false,
+        "ocr_conf": 0.001,
+        "img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test4\\plates\\plate_1_f98.png"
+      },
+      {
+        "raw_ocr": "Guold 329",
+        "plate": "GU010329",
+        "valid": false,
+        "ocr_conf": 0.088,
+        "img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test4\\plates\\plate_1_f62.png"
+      },
+      {
+        "raw_ocr": "GLOLDI 329",
+        "plate": "GL01D1329",
+        "valid": false,
+        "ocr_conf": 0.102,
+        "img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test4\\plates\\plate_1_f64.png"
+      },
+      {
+        "raw_ocr": "GOLDC219",
+        "plate": "GO10C219",
+        "valid": false,
+        "ocr_conf": 0.111,
+        "img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test4\\plates\\plate_1_f100.png"
+      },
+      {
+        "raw_ocr": "GLLD 329",
+        "plate": "GLLD329",
+        "valid": false,
+        "ocr_conf": 0.157,
+        "img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test4\\plates\\plate_1_f63.png"
+      }
+    ],
+    "plate": "MH12AB9379",
+    "valid": true,
+    "plate_match": null,
+    "ocr_seconds": 25.44,
+    "status": "challan_issued",
+    "reason": null,
+    "plate_source": "officer_corrected",
+    "owner": "Not in demo vehicle DB",
+    "sms_to": "demo receiver",
+    "sms_text": "Dear Vehicle Owner, MH12AB9379. Violation noticed: Riding without helmet at Kondhwa Junction, Pune on 19-11-2026, 01:12 (MV Act Sec. 129/194D). Challan ID: PTP-20261118-0001. Fine: Rs. 1000. Pay by 04-12-2026. Contest with evidence ID: PTP-20261118-0001. Regards, Pune Traffic Police.",
+    "sms_status": "failed",
+    "sms_sid": null,
+    "sms_kind": "challan",
+    "sms_error": "Twilio trial: the receiver number is not verified / no Twilio number is assigned. In the Twilio console verify DEMO_RECEIVER and buy a trial number, then put it in TWILIO_PHONE.",
+    "fine": 1000,
+    "reviewed_by": "Officer-01",
+    "reviewed_at": "2026-11-19T01:12:17",
+    "review_action": "approved"
+  },
+  {
+    "track_id": "5",
+    "hits": 15,
+    "first_frame": 157,
+    "plate_img": null,
+    "rider_img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test4\\riders\\rider_5_f159.png",
+    "frame_time_ms": 3160.0,
+    "last_frame": 171,
+    "challan_id": "PTP-20261118-0002",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-18T23:25:14",
+    "status": "rejected",
+    "reason": "no plate linked to rider",
+    "reviewed_by": "Officer-01",
+    "reviewed_at": "2026-11-19T01:12:50",
+    "review_action": "rejected"
+  }
+]

@@ -1,0 +1,39 @@
+﻿
+Frames: 378 | candidate tracks: 1 | confirmed violations: 1
+{
+  "track_id": "1",
+  "hits": 135,
+  "first_frame": 5,
+  "plate_img": null,
+  "rider_img": "outputs\\test3\\riders\\rider_1_f7.png",
+  "frame_time_ms": 120.0,
+  "last_frame": 167,
+  "merged_track_ids": [
+    "11"
+  ],
+  "challan_id": "PTP-20261103-0001",
+  "camera_id": "CAM-01",
+  "location": "Kondhwa Junction, Pune",
+  "timestamp": "2026-11-03T00:13:44",
+  "status": "manual_review",
+  "reason": "no plate linked to rider"
+}
+
+SUMMARY {
+  "source": "test3.mp4",
+  "frames": 378,
+  "resolution": "596x336",
+  "video_fps": 50.0,
+  "avg_detect_track_ms": 28.8,
+  "processing_fps": 34.7,
+  "detections_per_class": {
+    "helmet": 352,
+    "no_helmet": 209,
+    "number_plate": 256,
+    "rider": 664
+  },
+  "candidate_tracks": 1,
+  "confirmed_violations": 1,
+  "challans_issued": 0,
+  "manual_review": 1
+}

@@ -1,0 +1,20 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.6, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\AYUSH\Desktop\adi\my_project\code\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\AYUSH\Desktop\adi\my_project\code\smart_traffic
+plugins: anyio-4.16.0
+collecting ... collected 11 items
+
+tests/test_units.py::test_iou_identical PASSED                           [  9%]
+tests/test_units.py::test_iou_disjoint PASSED                            [ 18%]
+tests/test_units.py::test_iou_partial PASSED                             [ 27%]
+tests/test_units.py::test_iou_zero_area PASSED                           [ 36%]
+tests/test_units.py::test_edge_rider PASSED                              [ 45%]
+tests/test_units.py::test_bottom_cut_rider_is_not_edge PASSED            [ 54%]
+tests/test_units.py::test_associate_and_decide_violation PASSED          [ 63%]
+tests/test_units.py::test_helmet_rider_not_violation PASSED              [ 72%]
+tests/test_units.py::test_edge_rider_not_violation PASSED                [ 81%]
+tests/test_units.py::test_plate_normalise_and_validate PASSED            [ 90%]
+tests/test_units.py::test_rule_correct PASSED                            [100%]
+
+============================= 11 passed in 3.49s ==============================

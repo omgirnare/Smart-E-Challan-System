@@ -1,0 +1,73 @@
+[
+  {
+    "track_id": "2",
+    "hits": 152,
+    "first_frame": 3,
+    "plate_img": "outputs/test5_video\\plates\\plate_2_f41.png",
+    "rider_img": "outputs/test5_video\\riders\\rider_2_f5.png",
+    "frame_time_ms": 133.33333333333334,
+    "last_frame": 177,
+    "challan_id": "PTP-20261118-0001",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-18T23:25:54",
+    "raw_ocr": "9379",
+    "ocr_conf": 0.612,
+    "engine": "easyocr+rules+mistral",
+    "ocr_readings": [
+      {
+        "raw_ocr": "9379",
+        "plate": "9379",
+        "valid": false,
+        "ocr_conf": 0.612,
+        "img": "outputs/test5_video\\plates\\plate_2_f41.png"
+      },
+      {
+        "raw_ocr": "9379",
+        "plate": "9379",
+        "valid": false,
+        "ocr_conf": 0.998,
+        "img": "outputs/test5_video\\plates\\plate_2_f36.png"
+      },
+      {
+        "raw_ocr": "9379",
+        "plate": "9379",
+        "valid": false,
+        "ocr_conf": 0.985,
+        "img": "outputs/test5_video\\plates\\plate_2_f35.png"
+      },
+      {
+        "raw_ocr": "9379",
+        "plate": "9379",
+        "valid": false,
+        "ocr_conf": 1.0,
+        "img": "outputs/test5_video\\plates\\plate_2_f38.png"
+      },
+      {
+        "raw_ocr": "9379",
+        "plate": "9379",
+        "valid": false,
+        "ocr_conf": 0.708,
+        "img": "outputs/test5_video\\plates\\plate_2_f37.png"
+      }
+    ],
+    "plate": "MH129379",
+    "valid": true,
+    "plate_match": null,
+    "ocr_seconds": 29.62,
+    "status": "challan_issued",
+    "reason": null,
+    "plate_source": "officer_corrected",
+    "owner": "Not in demo vehicle DB",
+    "sms_to": "demo receiver",
+    "sms_text": "Dear Vehicle Owner, MH129379. Violation noticed: Riding without helmet at Kondhwa Junction, Pune on 19-11-2026, 01:11 (MV Act Sec. 129/194D). Challan ID: PTP-20261118-0001. Fine: Rs. 1000. Pay by 04-12-2026. Contest with evidence ID: PTP-20261118-0001. Regards, Pune Traffic Police.",
+    "sms_status": "failed",
+    "sms_sid": null,
+    "sms_kind": "challan",
+    "sms_error": "Twilio trial: the receiver number is not verified / no Twilio number is assigned. In the Twilio console verify DEMO_RECEIVER and buy a trial number, then put it in TWILIO_PHONE.",
+    "fine": 1000,
+    "reviewed_by": "Officer-01",
+    "reviewed_at": "2026-11-19T01:11:37",
+    "review_action": "approved"
+  }
+]

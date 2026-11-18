@@ -1,0 +1,8 @@
+[
+  {"name": "Rahul Patil", "number_plate_number": "MH21BW0214", "phone_number": "+919800000001", "address": "Jalna, Maharashtra", "vehicle_type": "Motorcycle"},
+  {"name": "Sneha Kulkarni", "number_plate_number": "MH12KX4521", "phone_number": "+919800000002", "address": "Kothrud, Pune", "vehicle_type": "Scooter"},
+  {"name": "Amit Deshmukh", "number_plate_number": "MH14GH7788", "phone_number": "+919800000003", "address": "Pimpri, Pune", "vehicle_type": "Motorcycle"},
+  {"name": "Priya Shah", "number_plate_number": "DL3SCA1234", "phone_number": "+919800000004", "address": "Rohini, New Delhi", "vehicle_type": "Scooter"},
+  {"name": "Vikram Rao", "number_plate_number": "KA05MN6789", "phone_number": "+919800000005", "address": "Jayanagar, Bengaluru", "vehicle_type": "Motorcycle"},
+  {"name": "Neha Joshi", "number_plate_number": "22BH4567AB", "phone_number": "+919800000006", "address": "Kondhwa, Pune", "vehicle_type": "Motorcycle"}
+]

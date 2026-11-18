@@ -1,0 +1,19 @@
+{
+  "source": "test5.mp4",
+  "frames": 177,
+  "resolution": "720x1280",
+  "video_fps": 30.0,
+  "avg_detect_track_ms": 31.7,
+  "processing_fps": 31.6,
+  "detections_per_class": {
+    "helmet": 0,
+    "no_helmet": 291,
+    "number_plate": 111,
+    "rider": 178
+  },
+  "candidate_tracks": 1,
+  "confirmed_violations": 1,
+  "challans_issued": 1,
+  "manual_review": 0,
+  "rejected": 0
+}

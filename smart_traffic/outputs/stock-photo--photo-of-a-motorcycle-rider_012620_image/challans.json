@@ -1,0 +1,45 @@
+[
+  {
+    "track_id": "1",
+    "hits": 1,
+    "first_frame": 1,
+    "plate_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\stock-photo--photo-of-a-motorcycle-rider_012620_image\\plates\\plate_1_f1.png",
+    "rider_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\stock-photo--photo-of-a-motorcycle-rider_012620_image\\riders\\rider_1_f1.png",
+    "frame_time_ms": 0,
+    "last_frame": 1,
+    "challan_id": "PTP-20261119-012630-01",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-19T01:26:30",
+    "raw_ocr": "KL 30 G 392",
+    "ocr_conf": 0.786,
+    "engine": "easyocr+rules",
+    "ocr_readings": [
+      {
+        "raw_ocr": "KL 30 G 392",
+        "plate": "KL306392",
+        "valid": true,
+        "ocr_conf": 0.786,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\stock-photo--photo-of-a-motorcycle-rider_012620_image\\plates\\plate_1_f1.png"
+      }
+    ],
+    "plate": "KL30GV6392",
+    "valid": true,
+    "plate_match": null,
+    "ocr_seconds": 2.88,
+    "status": "challan_issued",
+    "reason": null,
+    "sms_text": "Violation Notice: KL30GV6392, Sec. 129/194D MV Act, No helmet at Kondhwa Junction, Pune on 19-11-2026, 01:27. Challan ID: PTP-20261119-012630-01. Fine: Rs. 1000. Pay by 04-12-2026. Contest with evidence ID: PTP-20261119-012630-01.",
+    "sms_status": "failed",
+    "sms_sid": null,
+    "sms_kind": "challan",
+    "sms_error": "Twilio trial: the receiver number is not verified / no Twilio number is assigned. In the Twilio console verify DEMO_RECEIVER and buy a trial number, then put it in TWILIO_PHONE.",
+    "plate_source": "officer_corrected",
+    "owner": "Not in demo vehicle DB",
+    "sms_to": "demo receiver",
+    "fine": 1000,
+    "reviewed_by": "Officer-01",
+    "reviewed_at": "2026-11-19T01:27:59",
+    "review_action": "approved"
+  }
+]

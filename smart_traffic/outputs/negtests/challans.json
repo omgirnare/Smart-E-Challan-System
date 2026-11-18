@@ -1,0 +1,33 @@
+[
+  {
+    "track_id": "1",
+    "hits": 1,
+    "first_frame": 1,
+    "plate_img": "outputs\\test5_image\\plates\\plate_1.png",
+    "rider_img": "outputs\\test5_image\\riders\\rider_1_f1.png",
+    "frame_time_ms": 0,
+    "last_frame": 1,
+    "challan_id": "PTP-20261103-0001",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-03T00:14:29",
+    "raw_ocr": "MH:2 IBU.021",
+    "ocr_conf": 0.051,
+    "plate": "MH14GH7788",
+    "valid": false,
+    "engine": "easyocr+rules+mistral",
+    "llm_suggestion": "MH2IBU021",
+    "ocr_seconds": 6.39,
+    "status": "rejected",
+    "reason": "plate text failed Indian format check",
+    "reviewed_by": "Officer-01",
+    "reviewed_at": "2026-11-03T00:18:41",
+    "plate_source": "officer_corrected",
+    "owner": "Amit Deshmukh",
+    "sms_to": "+91980000XXXX",
+    "sms_text": "Violation Notice: MH14GH7788, Sec. 129/194D, No helmet at Kondhwa Junction, Pune on 03-11-2026, 00:18. Challan ID: PTP-20261103-0001. Fine: Rs. 1000, due by 18-11-2026. Contest with evidence ID: PTP-20261103-0001.",
+    "sms_status": "failed",
+    "sms_sid": null,
+    "fine": 1000
+  }
+]

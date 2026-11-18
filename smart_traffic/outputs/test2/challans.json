@@ -1,0 +1,69 @@
+[
+  {
+    "track_id": "1",
+    "hits": 84,
+    "first_frame": 3,
+    "plate_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test2\\plates\\plate_1_f30.png",
+    "rider_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test2\\riders\\rider_1_f5.png",
+    "frame_time_ms": 133.33333333333334,
+    "last_frame": 95,
+    "challan_id": "PTP-20261119-011949-01",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-19T01:19:49",
+    "raw_ocr": "MAEBJ (9379",
+    "ocr_conf": 0.551,
+    "engine": "easyocr+rules+mistral",
+    "ocr_readings": [
+      {
+        "raw_ocr": "MAEBJ (9379",
+        "plate": "MAE8J9379",
+        "valid": false,
+        "ocr_conf": 0.551,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test2\\plates\\plate_1_f30.png"
+      },
+      {
+        "raw_ocr": "MMABJ 09379",
+        "plate": "MM48JO9379",
+        "valid": false,
+        "ocr_conf": 0.143,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test2\\plates\\plate_1_f29.png"
+      },
+      {
+        "raw_ocr": "M536J 9379",
+        "plate": "MS36J9379",
+        "valid": false,
+        "ocr_conf": 0.553,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test2\\plates\\plate_1_f28.png"
+      },
+      {
+        "raw_ocr": "M 6 6J (9379",
+        "plate": "MG6J9379",
+        "valid": false,
+        "ocr_conf": 0.495,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test2\\plates\\plate_1_f27.png"
+      },
+      {
+        "raw_ocr": "Ne e 0u 9379",
+        "plate": "NEE0U9379",
+        "valid": false,
+        "ocr_conf": 0.518,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test2\\plates\\plate_1_f26.png"
+      }
+    ],
+    "plate": "MH16BJ9379",
+    "valid": true,
+    "plate_match": "db_fuzzy",
+    "ocr_seconds": 41.54,
+    "match_distance": 3.0,
+    "matched_from": "M536J9379",
+    "owner": "Sachin Pawar",
+    "sms_to": "+91980000XXXX",
+    "sms_text": "Violation Notice: MH16BJ9379, Sec. 129/194D MV Act, No helmet at Kondhwa Junction, Pune on 19-11-2026, 01:19. Challan ID: PTP-20261119-011949-01. Fine: Rs. 1000, due by 04-12-2026. Contest with evidence ID: PTP-20261119-011949-01.",
+    "sms_status": "failed",
+    "sms_sid": null,
+    "fine": 1000,
+    "status": "challan_issued",
+    "sms_error": "Twilio trial: the receiver number is not verified / no Twilio number is assigned. In the Twilio console verify DEMO_RECEIVER and buy a trial number, then put it in TWILIO_PHONE."
+  }
+]

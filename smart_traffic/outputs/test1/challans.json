@@ -1,0 +1,69 @@
+[
+  {
+    "track_id": "1",
+    "hits": 238,
+    "first_frame": 3,
+    "plate_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test1\\plates\\plate_1_f120.png",
+    "rider_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test1\\riders\\rider_1_f5.png",
+    "frame_time_ms": 80.0,
+    "last_frame": 240,
+    "challan_id": "PTP-20261119-010840-01",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-19T01:08:40",
+    "raw_ocr": "GAH 16 T5",
+    "ocr_conf": 0.425,
+    "engine": "easyocr+rules+mistral",
+    "ocr_readings": [
+      {
+        "raw_ocr": "GAH 16 T5",
+        "plate": "GAH16T5",
+        "valid": false,
+        "ocr_conf": 0.425,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test1\\plates\\plate_1_f120.png"
+      },
+      {
+        "raw_ocr": "GG 6250",
+        "plate": "GG6250",
+        "valid": false,
+        "ocr_conf": 0.304,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test1\\plates\\plate_1_f148.png"
+      },
+      {
+        "raw_ocr": "GHG 625",
+        "plate": "GHG625",
+        "valid": false,
+        "ocr_conf": 0.37,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test1\\plates\\plate_1_f119.png"
+      },
+      {
+        "raw_ocr": "DuC 6250",
+        "plate": "DUC6250",
+        "valid": false,
+        "ocr_conf": 0.209,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test1\\plates\\plate_1_f144.png"
+      },
+      {
+        "raw_ocr": "Ga H 16 6250",
+        "plate": "GA166250",
+        "valid": true,
+        "ocr_conf": 0.295,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test1\\plates\\plate_1_f134.png"
+      }
+    ],
+    "plate": "GAH16T5",
+    "valid": false,
+    "plate_match": null,
+    "ocr_seconds": 38.97,
+    "status": "rejected",
+    "reason": "plate not found in vehicle database",
+    "sms_text": "Traffic alert PTP-20261119-010840-01: no-helmet violation detected by CAM-01 at Kondhwa Junction, Pune on 19-11-2026 01:08. Plate: not readable. Evidence saved; pending officer verification before e-challan.",
+    "sms_status": "failed",
+    "sms_sid": null,
+    "sms_kind": "alert",
+    "sms_error": "Twilio trial: the receiver number is not verified / no Twilio number is assigned. In the Twilio console verify DEMO_RECEIVER and buy a trial number, then put it in TWILIO_PHONE.",
+    "reviewed_by": "Officer-01",
+    "reviewed_at": "2026-11-19T01:13:07",
+    "review_action": "rejected"
+  }
+]

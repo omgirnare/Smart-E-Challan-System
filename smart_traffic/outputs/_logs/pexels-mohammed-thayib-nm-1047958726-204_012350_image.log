@@ -1,0 +1,27 @@
+PROGRESS 1 0
+
+Frames: 1 | candidate tracks: 0 | confirmed violations: 0
+STAGE ocr 0
+
+SUMMARY {
+  "source": "pexels-mohammed-thayib-nm-1047958726-204_012350.jpg",
+  "frames": 1,
+  "resolution": "1836x3264",
+  "video_fps": null,
+  "avg_detect_track_ms": 845.5,
+  "processing_fps": 1.2,
+  "detections_per_class": {
+    "helmet": 1,
+    "no_helmet": 0,
+    "number_plate": 1,
+    "rider": 1
+  },
+  "candidate_tracks": 0,
+  "confirmed_violations": 0,
+  "challans_issued": 0,
+  "manual_review": 0,
+  "skipped_riders": {
+    "rider wearing helmet": 1
+  }
+}
+STAGE done

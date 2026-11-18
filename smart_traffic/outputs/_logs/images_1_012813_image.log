@@ -1,0 +1,87 @@
+PROGRESS 1 0
+
+Frames: 1 | candidate tracks: 2 | confirmed violations: 2
+STAGE ocr 2
+STAGE case 1 2
+[Twilio] send failed: HTTP 422 error: Unable to create record: No Twilio trial phone number is assigned for messaging to this destination number. Please add the 'to' number as a verified recipient.
+{
+  "track_id": "1",
+  "hits": 1,
+  "first_frame": 1,
+  "plate_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\images_1_012813_image\\plates\\plate_1_f1.png",
+  "rider_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\images_1_012813_image\\riders\\rider_1_f1.png",
+  "frame_time_ms": 0,
+  "last_frame": 1,
+  "challan_id": "PTP-20261119-012832-01",
+  "camera_id": "CAM-01",
+  "location": "Kondhwa Junction, Pune",
+  "timestamp": "2026-11-19T01:28:32",
+  "raw_ocr": "T 67 92",
+  "ocr_conf": 0.282,
+  "engine": "easyocr+rules+mistral",
+  "ocr_readings": [
+    {
+      "raw_ocr": "T 67 92",
+      "plate": "T6792",
+      "valid": false,
+      "ocr_conf": 0.282,
+      "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\images_1_012813_image\\plates\\plate_1_f1.png"
+    }
+  ],
+  "plate": "T6792",
+  "valid": false,
+  "plate_match": null,
+  "ocr_seconds": 7.57,
+  "status": "manual_review",
+  "reason": "plate text failed Indian format check",
+  "sms_text": "Traffic alert PTP-20261119-012832-01: no-helmet violation detected by CAM-01 at Kondhwa Junction, Pune on 19-11-2026 01:28. Plate: not readable. Evidence saved; pending officer verification before e-challan.",
+  "sms_status": "failed",
+  "sms_sid": null,
+  "sms_kind": "alert",
+  "sms_error": "Twilio trial: the receiver number is not verified / no Twilio number is assigned. In the Twilio console verify DEMO_RECEIVER and buy a trial number, then put it in TWILIO_PHONE."
+}
+STAGE case 2 2
+[Twilio] send failed: HTTP 422 error: Unable to create record: No Twilio trial phone number is assigned for messaging to this destination number. Please add the 'to' number as a verified recipient.
+{
+  "track_id": "4",
+  "hits": 1,
+  "first_frame": 1,
+  "plate_img": null,
+  "rider_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\images_1_012813_image\\riders\\rider_4_f1.png",
+  "frame_time_ms": 0,
+  "last_frame": 1,
+  "challan_id": "PTP-20261119-012832-02",
+  "camera_id": "CAM-01",
+  "location": "Kondhwa Junction, Pune",
+  "timestamp": "2026-11-19T01:28:32",
+  "status": "manual_review",
+  "reason": "no plate linked to rider",
+  "sms_text": "Traffic alert PTP-20261119-012832-02: no-helmet violation detected by CAM-01 at Kondhwa Junction, Pune on 19-11-2026 01:28. Plate: not readable. Evidence saved; pending officer verification before e-challan.",
+  "sms_status": "failed",
+  "sms_sid": null,
+  "sms_kind": "alert",
+  "sms_error": "Twilio trial: the receiver number is not verified / no Twilio number is assigned. In the Twilio console verify DEMO_RECEIVER and buy a trial number, then put it in TWILIO_PHONE."
+}
+
+SUMMARY {
+  "source": "images_1_012813.jpg",
+  "frames": 1,
+  "resolution": "766x400",
+  "video_fps": null,
+  "avg_detect_track_ms": 758.0,
+  "processing_fps": 1.3,
+  "detections_per_class": {
+    "helmet": 1,
+    "no_helmet": 3,
+    "number_plate": 2,
+    "rider": 3
+  },
+  "candidate_tracks": 2,
+  "confirmed_violations": 2,
+  "challans_issued": 0,
+  "manual_review": 2,
+  "skipped_riders": {
+    "rider wearing helmet": 1
+  }
+}
+STAGE done

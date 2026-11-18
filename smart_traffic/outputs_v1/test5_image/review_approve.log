@@ -1,0 +1,6 @@
+﻿[Twilio] credentials not set -> DRY-RUN (message not sent)
+Owner     : Rahul Patil (Jalna, Maharashtra)
+Plate     : MH21BW0214
+Challan   : PTP-20261103-0001  Fine Rs. 1000
+SMS (dry-run):
+Dear Rahul Patil, Violation Notice MH21BW0214 (Sec. 129/194D). Unsafe riding without helmet at Kondhwa Junction, Pune on 03-11-2026, 00:09. Challan ID: PTP-20261103-0001. Fine: Rs. 1000. Pay by 18-11-2026. Contest with evidence ID: PTP-20261103-0001. Regards, Pune Traffic Police.

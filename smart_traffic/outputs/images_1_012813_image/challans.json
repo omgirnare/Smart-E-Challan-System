@@ -1,0 +1,58 @@
+[
+  {
+    "track_id": "1",
+    "hits": 1,
+    "first_frame": 1,
+    "plate_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\images_1_012813_image\\plates\\plate_1_f1.png",
+    "rider_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\images_1_012813_image\\riders\\rider_1_f1.png",
+    "frame_time_ms": 0,
+    "last_frame": 1,
+    "challan_id": "PTP-20261119-012832-01",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-19T01:28:32",
+    "raw_ocr": "T 67 92",
+    "ocr_conf": 0.282,
+    "engine": "easyocr+rules+mistral",
+    "ocr_readings": [
+      {
+        "raw_ocr": "T 67 92",
+        "plate": "T6792",
+        "valid": false,
+        "ocr_conf": 0.282,
+        "img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\images_1_012813_image\\plates\\plate_1_f1.png"
+      }
+    ],
+    "plate": "T6792",
+    "valid": false,
+    "plate_match": null,
+    "ocr_seconds": 7.57,
+    "status": "manual_review",
+    "reason": "plate text failed Indian format check",
+    "sms_text": "Traffic alert PTP-20261119-012832-01: no-helmet violation detected by CAM-01 at Kondhwa Junction, Pune on 19-11-2026 01:28. Plate: not readable. Evidence saved; pending officer verification before e-challan.",
+    "sms_status": "failed",
+    "sms_sid": null,
+    "sms_kind": "alert",
+    "sms_error": "Twilio trial: the receiver number is not verified / no Twilio number is assigned. In the Twilio console verify DEMO_RECEIVER and buy a trial number, then put it in TWILIO_PHONE."
+  },
+  {
+    "track_id": "4",
+    "hits": 1,
+    "first_frame": 1,
+    "plate_img": null,
+    "rider_img": "C:\\Users\\AYUSH\\desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\images_1_012813_image\\riders\\rider_4_f1.png",
+    "frame_time_ms": 0,
+    "last_frame": 1,
+    "challan_id": "PTP-20261119-012832-02",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-19T01:28:32",
+    "status": "manual_review",
+    "reason": "no plate linked to rider",
+    "sms_text": "Traffic alert PTP-20261119-012832-02: no-helmet violation detected by CAM-01 at Kondhwa Junction, Pune on 19-11-2026 01:28. Plate: not readable. Evidence saved; pending officer verification before e-challan.",
+    "sms_status": "failed",
+    "sms_sid": null,
+    "sms_kind": "alert",
+    "sms_error": "Twilio trial: the receiver number is not verified / no Twilio number is assigned. In the Twilio console verify DEMO_RECEIVER and buy a trial number, then put it in TWILIO_PHONE."
+  }
+]

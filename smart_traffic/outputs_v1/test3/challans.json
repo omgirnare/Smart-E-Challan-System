@@ -1,0 +1,30 @@
+[
+  {
+    "track_id": "1",
+    "hits": 83,
+    "first_frame": 5,
+    "plate_img": null,
+    "rider_img": "outputs\\test3\\riders\\rider_1_f7.png",
+    "frame_time_ms": 120.0,
+    "challan_id": "PTP-20261103-0001",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-03T00:08:20",
+    "status": "manual_review",
+    "reason": "no plate linked to rider"
+  },
+  {
+    "track_id": "11",
+    "hits": 20,
+    "first_frame": 115,
+    "plate_img": null,
+    "rider_img": "outputs\\test3\\riders\\rider_11_f117.png",
+    "frame_time_ms": 2320.0,
+    "challan_id": "PTP-20261103-0002",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-03T00:08:20",
+    "status": "manual_review",
+    "reason": "no plate linked to rider"
+  }
+]

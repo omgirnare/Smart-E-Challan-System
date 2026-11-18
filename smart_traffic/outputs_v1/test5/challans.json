@@ -1,0 +1,23 @@
+[
+  {
+    "track_id": "2",
+    "hits": 152,
+    "first_frame": 3,
+    "plate_img": "outputs\\test5\\plates\\plate_2.png",
+    "rider_img": "outputs\\test5\\riders\\rider_2_f5.png",
+    "frame_time_ms": 133.33333333333334,
+    "challan_id": "PTP-20261103-0001",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-03T00:08:46",
+    "raw_ocr": "9379",
+    "ocr_conf": 0.612,
+    "plate": "9379",
+    "valid": false,
+    "engine": "easyocr+rules+mistral",
+    "llm_suggestion": "9379",
+    "ocr_seconds": 7.22,
+    "status": "manual_review",
+    "reason": "plate text failed Indian format check"
+  }
+]

@@ -1,0 +1,43 @@
+﻿
+Frames: 256 | candidate tracks: 1 | confirmed violations: 1
+{
+  "track_id": "1",
+  "hits": 238,
+  "first_frame": 3,
+  "plate_img": "outputs\\test1\\plates\\plate_1.png",
+  "rider_img": "outputs\\test1\\riders\\rider_1_f5.png",
+  "frame_time_ms": 80.0,
+  "last_frame": 240,
+  "challan_id": "PTP-20261103-0001",
+  "camera_id": "CAM-01",
+  "location": "Kondhwa Junction, Pune",
+  "timestamp": "2026-11-03T00:13:04",
+  "raw_ocr": "GAH 16 T5",
+  "ocr_conf": 0.425,
+  "plate": "GAH16T5",
+  "valid": false,
+  "engine": "easyocr+rules+mistral",
+  "llm_suggestion": "GAH16T5",
+  "ocr_seconds": 6.05,
+  "status": "manual_review",
+  "reason": "plate text failed Indian format check"
+}
+
+SUMMARY {
+  "source": "test1.mp4",
+  "frames": 256,
+  "resolution": "596x336",
+  "video_fps": 50.0,
+  "avg_detect_track_ms": 27.1,
+  "processing_fps": 36.9,
+  "detections_per_class": {
+    "helmet": 10,
+    "no_helmet": 250,
+    "number_plate": 156,
+    "rider": 252
+  },
+  "candidate_tracks": 1,
+  "confirmed_violations": 1,
+  "challans_issued": 0,
+  "manual_review": 1
+}

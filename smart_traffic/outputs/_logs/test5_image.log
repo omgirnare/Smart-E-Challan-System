@@ -1,0 +1,66 @@
+PROGRESS 1 0
+
+Frames: 1 | candidate tracks: 1 | confirmed violations: 1
+STAGE ocr 1
+STAGE case 1 1
+[Twilio] send failed: HTTP 422 error: Unable to create record: No Twilio trial phone number is assigned for messaging to this destination number. Please add the 'to' number as a verified recipient.
+{
+  "track_id": "1",
+  "hits": 1,
+  "first_frame": 1,
+  "plate_img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test5_image\\plates\\plate_1_f1.png",
+  "rider_img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test5_image\\riders\\rider_1_f1.png",
+  "frame_time_ms": 0,
+  "last_frame": 1,
+  "challan_id": "PTP-20261118-235310-01",
+  "camera_id": "CAM-01",
+  "location": "Kondhwa Junction, Pune",
+  "timestamp": "2026-11-18T23:53:10",
+  "raw_ocr": "MH:2 IBU.021",
+  "ocr_conf": 0.051,
+  "engine": "easyocr+rules+mistral",
+  "ocr_readings": [
+    {
+      "raw_ocr": "MH:2 IBU.021",
+      "plate": "MH21BU021",
+      "valid": false,
+      "ocr_conf": 0.051,
+      "img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test5_image\\plates\\plate_1_f1.png"
+    }
+  ],
+  "plate": "MH21BW0214",
+  "valid": true,
+  "plate_match": "db_fuzzy",
+  "ocr_seconds": 18.21,
+  "match_distance": 1.5,
+  "matched_from": "MH21BU021",
+  "owner": "Rahul Patil",
+  "sms_to": "+91980000XXXX",
+  "sms_text": "Dear Rahul Patil, Violation notice MV Act Sec. 129/194D for riding without helmet on 18-11-2026, 23:53, Kondhwa Junction, Pune. Challan ID: PTP-20261118-235310-01. Fine: Rs. 1000, pay by 03-12-2026. Contest with evidence ID: PTP-20261118-235310-01. Regards, Pune Traffic Police.",
+  "sms_status": "failed",
+  "sms_sid": null,
+  "fine": 1000,
+  "status": "challan_issued",
+  "sms_error": "Twilio trial: the receiver number is not verified / no Twilio number is assigned. In the Twilio console verify DEMO_RECEIVER and buy a trial number, then put it in TWILIO_PHONE."
+}
+
+SUMMARY {
+  "source": "test5.jpeg",
+  "frames": 1,
+  "resolution": "780x1040",
+  "video_fps": null,
+  "avg_detect_track_ms": 706.0,
+  "processing_fps": 1.4,
+  "detections_per_class": {
+    "helmet": 0,
+    "no_helmet": 1,
+    "number_plate": 1,
+    "rider": 1
+  },
+  "candidate_tracks": 1,
+  "confirmed_violations": 1,
+  "challans_issued": 1,
+  "manual_review": 0,
+  "skipped_riders": {}
+}
+STAGE done

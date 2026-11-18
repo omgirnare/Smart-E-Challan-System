@@ -1,0 +1,3 @@
+﻿Challan ID             Track  OCR text         Status         Reason
+PTP-20261103-0001      1      MH:2 IBU.021     manual_review  plate text failed Indian format check
+                       evidence: outputs\test5_image\riders\rider_1_f1.png | outputs\test5_image\plates\plate_1.png

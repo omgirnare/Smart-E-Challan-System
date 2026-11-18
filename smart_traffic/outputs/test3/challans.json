@@ -1,0 +1,23 @@
+[
+  {
+    "track_id": "1",
+    "hits": 135,
+    "first_frame": 5,
+    "plate_img": null,
+    "rider_img": "C:\\Users\\AYUSH\\Desktop\\adi\\my_project\\code\\smart_traffic\\outputs\\test3\\riders\\rider_1_f7.png",
+    "frame_time_ms": 120.0,
+    "last_frame": 167,
+    "merged_track_ids": [
+      "11"
+    ],
+    "challan_id": "PTP-20261118-0001",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-18T23:27:23",
+    "status": "rejected",
+    "reason": "no plate linked to rider",
+    "reviewed_by": "Officer-01",
+    "reviewed_at": "2026-11-19T00:19:58",
+    "review_action": "rejected"
+  }
+]

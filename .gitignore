@@ -1,0 +1,19 @@
+# secrets
+.env
+smart_traffic/.env
+
+# local environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# third-party reference project (kept locally only)
+Automated-Traffic-Fine-System-Using-Helmet-Detection-with-Deep-Learning-main/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

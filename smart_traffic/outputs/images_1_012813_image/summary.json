@@ -1,0 +1,21 @@
+{
+  "source": "images_1_012813.jpg",
+  "frames": 1,
+  "resolution": "766x400",
+  "video_fps": null,
+  "avg_detect_track_ms": 758.0,
+  "processing_fps": 1.3,
+  "detections_per_class": {
+    "helmet": 1,
+    "no_helmet": 3,
+    "number_plate": 2,
+    "rider": 3
+  },
+  "candidate_tracks": 2,
+  "confirmed_violations": 2,
+  "challans_issued": 0,
+  "manual_review": 2,
+  "skipped_riders": {
+    "rider wearing helmet": 1
+  }
+}

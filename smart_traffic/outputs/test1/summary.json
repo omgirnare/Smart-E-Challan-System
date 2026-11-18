@@ -1,0 +1,22 @@
+{
+  "source": "test1.mp4",
+  "frames": 256,
+  "resolution": "596x336",
+  "video_fps": 50.0,
+  "avg_detect_track_ms": 70.9,
+  "processing_fps": 14.1,
+  "detections_per_class": {
+    "helmet": 10,
+    "no_helmet": 250,
+    "number_plate": 156,
+    "rider": 252
+  },
+  "candidate_tracks": 1,
+  "confirmed_violations": 1,
+  "challans_issued": 0,
+  "manual_review": 0,
+  "skipped_riders": {
+    "rider cut at image border (head may be outside frame)": 16
+  },
+  "rejected": 1
+}

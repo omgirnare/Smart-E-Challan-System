@@ -1,0 +1,16 @@
+[
+  {
+    "track_id": "5",
+    "hits": 11,
+    "first_frame": 161,
+    "plate_img": null,
+    "rider_img": "outputs\\test4\\riders\\rider_5_f163.png",
+    "frame_time_ms": 3240.0,
+    "challan_id": "PTP-20261103-0001",
+    "camera_id": "CAM-01",
+    "location": "Kondhwa Junction, Pune",
+    "timestamp": "2026-11-03T00:08:33",
+    "status": "manual_review",
+    "reason": "no plate linked to rider"
+  }
+]
