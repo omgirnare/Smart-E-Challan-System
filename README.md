@@ -24,16 +24,26 @@ You need: Windows 10/11 (64-bit), internet, ~10 GB free disk.
 
 ### Step 1 – Install Python 3.11
 
+The project needs **Python 3.11** (3.12 also works). Newer versions such as 3.13, 3.14 or 3.15 are **not**
+supported by PyTorch 2.5.1. If a newer Python is already installed, **keep it**: install 3.11 next to it, and
+`setup.ps1` picks 3.11 automatically.
+
+**Option A – a newer Python is already installed (has the `py` command):** in PowerShell run
+```
+py install 3.11
+```
+(If that says *unknown command*, use Option B instead.)
+
+**Option B – installer:**
 1. Open https://www.python.org/downloads/release/python-3119/ and scroll to **Files**.
 2. Download **Windows installer (64-bit)** and run it.
-3. On the first screen, **tick "Add python.exe to PATH"**, then click **Install Now**.
-4. Check it: open a new **PowerShell** window (Start menu → type `PowerShell`) and run:
-   ```
-   python --version
-   ```
-   It must print `Python 3.11.x`.
+3. On the first screen tick **"Add python.exe to PATH"** (and keep *"Use admin privileges when installing py.exe"*), then click **Install Now**.
 
-> Use 3.11 (3.12 also works). Python 3.13 is **not** supported by PyTorch 2.5.1.
+**Check it:** open a **new** PowerShell window (Start menu → type `PowerShell`) and run:
+```
+py -3.11 --version
+```
+It must print `Python 3.11.x`. (`python --version` may still show 3.15, which is fine.)
 
 ### Step 2 – Install Git
 
@@ -114,7 +124,8 @@ cd smart_traffic
 | Problem | Fix |
 |---|---|
 | `running scripts is disabled on this system` | Use the exact command from Step 5 (it contains `-ExecutionPolicy Bypass`) |
-| `Python 3.11 not found` | Reinstall Python 3.11 with **Add to PATH** ticked, then open a **new** PowerShell |
+| `Python 3.11 not found` | Install Python 3.11 (Step 1; it can sit next to 3.13/3.14/3.15), then open a **new** PowerShell and check `py -3.11 --version` |
+| `.venv` was created with the wrong Python (e.g. 3.15) | Delete the `.venv` folder, install 3.11, run `setup.ps1` again |
 | `python` opens the Microsoft Store | Settings → Apps → Advanced app settings → App execution aliases → turn off both *python* entries |
 | `.venv not found` when starting | Run Step 5 first |
 | GPU present but setup says *CPU mode* | Update the NVIDIA driver, delete the `.venv` folder, run Step 5 again |

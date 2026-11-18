@@ -28,12 +28,20 @@ foreach ($cand in @(@("py", "-3.11"), @("py", "-3.12"), @("python"))) {
     if ($LASTEXITCODE -eq 0 -and ($v -eq "3.11" -or $v -eq "3.12")) { $py = $cand; break }
 }
 if (-not $py) {
-    throw "Python 3.11 (or 3.12) not found. Install it from https://www.python.org/downloads/release/python-3119/ (tick 'Add python.exe to PATH') and run this script again."
+    throw ("Python 3.11 (or 3.12) not found. Newer versions (3.13+) are not supported by PyTorch 2.5.1 but can stay installed. " +
+           "Install 3.11 next to them with:  py install 3.11   or from https://www.python.org/downloads/release/python-3119/ , then open a new PowerShell and run this script again.")
 }
 Write-Host "Using: $($py -join ' ')  (Python $v)"
 
 # ---- 2. Virtual environment ----
 Step "2/6  Creating virtual environment in .venv"
+if (Test-Path $vpy) {
+    try { $vv = & $vpy -c "import sys; print('%d.%d' % sys.version_info[:2])" 2>$null } catch { $vv = $null }
+    if ($vv -ne "3.11" -and $vv -ne "3.12") {
+        Write-Host "Existing .venv uses Python $vv (unsupported) - recreating it with $v" -ForegroundColor Yellow
+        Remove-Item $venv -Recurse -Force
+    }
+}
 if (-not (Test-Path $vpy)) {
     $extra = @($py | Select-Object -Skip 1)
     Run $py[0] ($extra + @("-m", "venv", $venv))
