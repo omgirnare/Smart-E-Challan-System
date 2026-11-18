@@ -2,7 +2,8 @@
 # Run from this folder:   powershell -ExecutionPolicy Bypass -File setup.ps1
 # Options:  -Cpu          force the CPU build of PyTorch even if an NVIDIA GPU is present
 #           -SkipOllama   do not download the Mistral model (system still works, see README.md)
-param([switch]$Cpu, [switch]$SkipOllama)
+#           -Python 3.14  use this Python version (otherwise the first of 3.11, 3.12, 3.14, 3.13 found)
+param([switch]$Cpu, [switch]$SkipOllama, [string]$Python = "")
 
 # "Continue": in Windows PowerShell 5.1 harmless stderr output of native programs (pip notices,
 # warnings) would otherwise abort the script. Failures are detected through exit codes in Run.
@@ -18,18 +19,26 @@ function Run($exe, [string[]]$a) {
     if ($LASTEXITCODE -ne 0) { throw "Command failed ($LASTEXITCODE): $exe $($a -join ' ')" }
 }
 
-# ---- 1. Python 3.11 / 3.12 ----
-Step "1/6  Looking for Python 3.11 or 3.12"
-$py = $null
-foreach ($cand in @(@("py", "-3.11"), @("py", "-3.12"), @("python"))) {
+# ---- 1. Python 3.11 - 3.14 ----
+# 3.11/3.12 use the originally tested PyTorch 2.5.1; 3.13/3.14 use PyTorch 2.14.1 (same results, tested).
+# 3.15+ is not supported yet: scikit-image / pyclipper (needed by EasyOCR) have no Windows builds for it.
+$supported = @("3.11", "3.12", "3.13", "3.14")
+Step "1/6  Looking for Python 3.11 - 3.14"
+$py = $null; $found = @()
+$cands = @(@("py", "-3.11"), @("py", "-3.12"), @("py", "-3.14"), @("py", "-3.13"), @("python"), @("python3"))
+if ($Python) { $cands = @(, @("py", "-$Python")) }   # assigned directly: an if-expression would flatten the list
+foreach ($cand in $cands) {
     if (-not (Get-Command $cand[0] -ErrorAction SilentlyContinue)) { continue }
     $extra = @($cand | Select-Object -Skip 1)
     try { $v = & $cand[0] @extra -c "import sys; print('%d.%d' % sys.version_info[:2])" 2>$null } catch { $v = $null }
-    if ($LASTEXITCODE -eq 0 -and ($v -eq "3.11" -or $v -eq "3.12")) { $py = $cand; break }
+    if ($LASTEXITCODE -ne 0 -or -not $v) { continue }
+    $found += $v
+    if ($supported -contains $v) { $py = $cand; break }
 }
 if (-not $py) {
-    throw ("Python 3.11 (or 3.12) not found. Newer versions (3.13+) are not supported by PyTorch 2.5.1 but can stay installed. " +
-           "Install 3.11 next to them with:  py install 3.11   or from https://www.python.org/downloads/release/python-3119/ , then open a new PowerShell and run this script again.")
+    $have = if ($found) { "Found Python " + (($found | Select-Object -Unique) -join ", ") + ", which is not supported. " } else { "No Python found. " }
+    throw ($have + "Install Python 3.14 (it can stay next to 3.15): https://www.python.org/downloads/ -> latest 3.14.x 'Windows installer (64-bit)', " +
+           "or run:  py install 3.14   Then open a NEW PowerShell window and run this script again.")
 }
 Write-Host "Using: $($py -join ' ')  (Python $v)"
 
@@ -37,8 +46,8 @@ Write-Host "Using: $($py -join ' ')  (Python $v)"
 Step "2/6  Creating virtual environment in .venv"
 if (Test-Path $vpy) {
     try { $vv = & $vpy -c "import sys; print('%d.%d' % sys.version_info[:2])" 2>$null } catch { $vv = $null }
-    if ($vv -ne "3.11" -and $vv -ne "3.12") {
-        Write-Host "Existing .venv uses Python $vv (unsupported) - recreating it with $v" -ForegroundColor Yellow
+    if ($vv -ne $v) {
+        Write-Host "Existing .venv uses Python $vv - recreating it with Python $v" -ForegroundColor Yellow
         Remove-Item $venv -Recurse -Force
     }
 }
@@ -53,9 +62,11 @@ $gpu = $false
 if (-not $Cpu -and (Get-Command nvidia-smi -ErrorAction SilentlyContinue)) {
     try { & nvidia-smi -L 2>$null | Out-Null; $gpu = ($LASTEXITCODE -eq 0) } catch { $gpu = $false }
 }
-$index = if ($gpu) { "https://download.pytorch.org/whl/cu121" } else { "https://download.pytorch.org/whl/cpu" }
-Step ("3/6  Installing PyTorch 2.5.1 (" + $(if ($gpu) { "NVIDIA CUDA 12.1" } else { "CPU only" }) + ") - large download, please wait")
-Run $vpy @("-m", "pip", "install", "torch==2.5.1", "torchvision==0.20.1", "--index-url", $index)
+if ($v -eq "3.11" -or $v -eq "3.12") { $tv = "2.5.1"; $tvv = "0.20.1"; $cu = "cu121"; $cuName = "CUDA 12.1" }
+else                                  { $tv = "2.14.1"; $tvv = "0.29.1"; $cu = "cu126"; $cuName = "CUDA 12.6" }
+$index = if ($gpu) { "https://download.pytorch.org/whl/$cu" } else { "https://download.pytorch.org/whl/cpu" }
+Step ("3/6  Installing PyTorch $tv (" + $(if ($gpu) { "NVIDIA $cuName" } else { "CPU only" }) + ") - large download (~2.5 GB with GPU), please wait")
+Run $vpy @("-m", "pip", "install", "torch==$tv", "torchvision==$tvv", "--index-url", $index)
 
 # ---- 4. Other packages ----
 Step "4/6  Installing project packages (requirements.txt)"

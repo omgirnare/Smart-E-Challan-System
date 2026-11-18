@@ -24,7 +24,9 @@ class Detector:
 
 class Tracker:
     def __init__(self):
-        self.ds = DeepSort(max_age=config.TRACK_MAX_AGE)
+        # half=False: the FP16 appearance embedder is ~6x slower with newer PyTorch (2.14: 78 vs 13 ms
+        # per frame on an RTX 3050) and no faster with 2.5.1, so full precision is used everywhere.
+        self.ds = DeepSort(max_age=config.TRACK_MAX_AGE, half=False)
 
     def track(self, detections, frame):
         """Return list of (track_id, [x1,y1,x2,y2], label, conf) for confirmed tracks."""

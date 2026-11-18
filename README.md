@@ -22,28 +22,28 @@ Group BE-A38 · Vishwakarma Institute of Information Technology, Pune · Guide: 
 Follow the steps in order. Total time: about 20–40 minutes, mostly downloads.
 You need: Windows 10/11 (64-bit), internet, ~10 GB free disk.
 
-### Step 1 – Install Python 3.11
+### Step 1 – Install Python 3.14
 
-The project needs **Python 3.11** (3.12 also works). Newer versions such as 3.13, 3.14 or 3.15 are **not**
-supported by PyTorch 2.5.1. If a newer Python is already installed, **keep it**: install 3.11 next to it, and
-`setup.ps1` picks 3.11 automatically.
+The project works with **Python 3.11, 3.12, 3.13 or 3.14**. **Python 3.15 does not work yet**, because two packages
+EasyOCR needs (scikit-image, pyclipper) have no Windows builds for it. If 3.15 is already installed, **keep it**:
+install 3.14 next to it, and `setup.ps1` picks 3.14 automatically.
 
-**Option A – a newer Python is already installed (has the `py` command):** in PowerShell run
-```
-py install 3.11
-```
-(If that says *unknown command*, use Option B instead.)
-
-**Option B – installer:**
-1. Open https://www.python.org/downloads/release/python-3119/ and scroll to **Files**.
+1. Open https://www.python.org/downloads/ and pick the latest **Python 3.14.x** release (not 3.15).
 2. Download **Windows installer (64-bit)** and run it.
-3. On the first screen tick **"Add python.exe to PATH"** (and keep *"Use admin privileges when installing py.exe"*), then click **Install Now**.
+3. On the first screen tick **"Add python.exe to PATH"**, then click **Install Now**.
+   *(Or, if the new Python install manager is present, simply run `py install 3.14` in PowerShell.)*
 
 **Check it:** open a **new** PowerShell window (Start menu → type `PowerShell`) and run:
 ```
-py -3.11 --version
+py -3.14 --version
 ```
-It must print `Python 3.11.x`. (`python --version` may still show 3.15, which is fine.)
+It must print `Python 3.14.x`. (`python --version` may still show 3.15, which is fine.)
+
+| Python | PyTorch installed by setup.ps1 |
+|---|---|
+| 3.11 / 3.12 | 2.5.1 (CUDA 12.1 or CPU) |
+| 3.13 / 3.14 | 2.14.1 (CUDA 12.6 or CPU) |
+| 3.15 | not supported yet |
 
 ### Step 2 – Install Git
 
@@ -77,7 +77,7 @@ Still in the `Smart-E-Challan-System` folder:
 powershell -ExecutionPolicy Bypass -File setup.ps1
 ```
 It does everything automatically:
-1. Finds Python 3.11.
+1. Finds a supported Python (3.11–3.14) and prints which one it uses.
 2. Creates a private environment in `.venv`.
 3. Installs PyTorch: the GPU build if an NVIDIA GPU is found, otherwise the CPU build.
 4. Installs all packages at the exact tested versions (`smart_traffic\requirements.txt`).
@@ -124,8 +124,8 @@ cd smart_traffic
 | Problem | Fix |
 |---|---|
 | `running scripts is disabled on this system` | Use the exact command from Step 5 (it contains `-ExecutionPolicy Bypass`) |
-| `Python 3.11 not found` | Install Python 3.11 (Step 1; it can sit next to 3.13/3.14/3.15), then open a **new** PowerShell and check `py -3.11 --version` |
-| `.venv` was created with the wrong Python (e.g. 3.15) | Delete the `.venv` folder, install 3.11, run `setup.ps1` again |
+| `Found Python 3.15, which is not supported` or `No Python found` | Install Python 3.14 (Step 1; 3.15 can stay installed), open a **new** PowerShell, check `py -3.14 --version` |
+| Want a specific Python version | `powershell -ExecutionPolicy Bypass -File setup.ps1 -Python 3.14` |
 | `python` opens the Microsoft Store | Settings → Apps → Advanced app settings → App execution aliases → turn off both *python* entries |
 | `.venv not found` when starting | Run Step 5 first |
 | GPU present but setup says *CPU mode* | Update the NVIDIA driver, delete the `.venv` folder, run Step 5 again |
@@ -136,7 +136,7 @@ cd smart_traffic
 ## Linux (Ubuntu) quick setup
 
 ```
-sudo apt install -y python3.11 python3.11-venv git
+sudo apt install -y python3.11 python3.11-venv git      # 3.11-3.14 work; with 3.13/3.14 use torch==2.14.1 torchvision==0.29.1 (.../whl/cu126)
 git clone https://github.com/omgirnare/Smart-E-Challan-System.git && cd Smart-E-Challan-System
 python3.11 -m venv .venv
 .venv/bin/pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121   # or .../whl/cpu
